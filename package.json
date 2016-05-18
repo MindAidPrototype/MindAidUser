@@ -1,0 +1,23 @@
+{
+  "name": "MindAidUser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MindAidPrototype/MindAidUser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MindAidPrototype/MindAidUser/issues"
+  },
+  "homepage": "https://github.com/MindAidPrototype/MindAidUser#readme",
+  "dependencies": {
+    "hapi": "^13.4.0"
+  }
+}

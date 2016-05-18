@@ -1,8 +1,12 @@
+'use strict'
+
 const Hapi = require('hapi')
 const http = require('http')
 
+const BASE_URL = 'https://api.github.com'
+
 const server = new Hapi.Server()
-server.connection({ port: 3000 })
+server.connection({ port: 3001 })
 
 server.route({
   method: 'GET',
@@ -14,22 +18,21 @@ server.route({
 
 server.route({
   method: 'GET',
-  path: '/sayhello',
+  path: '/test',
   handler: function (request, reply) {
     const options = {
-      port: 4000,
-      hostname: '127.0.0.1',
+      hostname: BASE_URL,
       method: 'GET',
-      path: '/sayhello2'
+      path: '/'
     }
     var replying = ''
     const req = http.request(options, res => {
-      res.on('data', (chunk) => {
+      console.log(res.headers, '<<<<<res')
+      res.on('data', chunk => {
         replying += chunk
       })
       res.on('end', () => {
         reply(replying)
-        console.log('No more data in response.')
       })
     })
     req.end()

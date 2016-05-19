@@ -1,12 +1,10 @@
-'use strict'
-
 const Hapi = require('hapi')
 const http = require('http')
 
-const BASE_URL = 'https://api.github.com'
+const BASE_URL = 'mindaidadmin.herokuapp.com'
 
 const server = new Hapi.Server()
-server.connection({ port: 3001 })
+server.connection({ port: 3000 })
 
 server.route({
   method: 'GET',
@@ -23,12 +21,12 @@ server.route({
     const options = {
       hostname: BASE_URL,
       method: 'GET',
-      path: '/'
+      path: '/sayhello'
     }
     var replying = ''
     const req = http.request(options, res => {
-      console.log(res.headers, '<<<<<res')
       res.on('data', chunk => {
+        console.log(chunk)
         replying += chunk
       })
       res.on('end', () => {

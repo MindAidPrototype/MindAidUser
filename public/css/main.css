@@ -7,6 +7,22 @@ nav a {
   color: black;
 }
 
+.welcome {
+  text-align: center;
+}
+
+.options {
+  margin: 20px 0;
+}
+
+.landing {
+  text-align: center;
+}
+
+.landing div {
+  margin: 30px 0;
+}
+
 footer {
   background-color: #333;
   color: white;

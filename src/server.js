@@ -57,7 +57,23 @@ server.register(plugins, (err) => {
     method: 'GET',
     path: '/welcome',
     handler: function (request, reply) {
-      reply.view('welcome')
+      reply.view('landing', null, {layout: 'welcome'})
+    }
+  })
+
+  server.route({
+    method: 'GET',
+    path: '/options',
+    handler: function (request, reply) {
+      reply.view('options', null, {layout: 'welcome'})
+    }
+  })
+
+  server.route({
+    method: 'GET',
+    path: '/listen',
+    handler: function (request, reply) {
+      reply.view('listen')
     }
   })
 

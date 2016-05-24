@@ -1,9 +1,11 @@
 const Hapi = require('hapi')
 const Path = require('path')
 const handlebars = require('handlebars')
+const port = process.env.PORT || 3000
 
 const server = new Hapi.Server()
-server.connection({ port: 3000 })
+
+server.connection({port})
 
 server.register([require('vision'), require('inert')], err => {
   if (err) throw err

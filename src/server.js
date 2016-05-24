@@ -4,14 +4,6 @@ const Vision = require('vision')
 const Inert = require('inert')
 
 const views = require('./routes/views.js')
-const index = require('./routes/index.js')
-const about = require('./routes/about.js')
-const learn = require('./routes/learn.js')
-const listen = require('./routes/listen.js')
-const questions = require('./routes/questions.js')
-const refer = require('./routes/refer.js')
-const remind = require('./routes/remind.js')
-const publicdir = require('./routes/publicdir.js')
 
 const plugins = [Vision, Inert]
 
@@ -24,14 +16,14 @@ server.register(plugins, err => {
   server.views(views)
 
   server.route([
-    index,
-    about,
-    learn,
-    listen,
-    questions,
-    refer,
-    remind,
-    publicdir
+    require('./routes/index.js'),
+    require('./routes/about.js'),
+    require('./routes/learn.js'),
+    require('./routes/listen.js'),
+    require('./routes/questions.js'),
+    require('./routes/refer.js'),
+    require('./routes/remind.js'),
+    require('./routes/publicdir.js')
   ])
 })
 

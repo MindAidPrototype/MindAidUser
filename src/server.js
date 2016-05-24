@@ -1,18 +1,11 @@
 const Hapi = require('hapi')
-const http = require('http')
 const Path = require('path')
-const vision = require('vision')
-const inert = require('inert')
 const handlebars = require('handlebars')
-
-const plugins = [vision, inert]
-
-const BASE_URL = 'mindaidadmin.herokuapp.com'
 
 const server = new Hapi.Server()
 server.connection({ port: 3000 })
 
-server.register(plugins, (err) => {
+server.register([require('vision'), require('inert')], err => {
   if (err) throw err
   server.views({
     engines: {html: handlebars},
@@ -20,64 +13,59 @@ server.register(plugins, (err) => {
     path: './views',
     layoutPath: './views/layout',
     layout: 'default',
-    partialsPath: './views/partials/'
+    //partialsPath: './views/partials/'
   })
 
-  server.route({
+  server.route([{
     method: 'GET',
     path: '/',
-    handler: function (request, reply) {
-      reply('Hello, server1!')
+    handler: (request, reply) => {
+      reply.view('index')
     }
-  })
-
-  server.route({
-    method: 'GET',
-    path: '/test',
-    handler: function (request, reply) {
-      const options = {
-        hostname: BASE_URL,
-        method: 'GET',
-        path: '/sayhello'
-      }
-      let replying = ''
-      const req = http.request(options, res => {
-        res.on('data', (chunk) => {
-          replying += chunk
-        })
-        res.on('end', () => {
-          reply(replying)
-        })
-      })
-      req.end()
+  },
+  {
+    method: 'get',
+    path: '/about',
+    handler: (request, reply) => {
+      reply.view('about')
     }
-  })
-
-  server.route({
-    method: 'GET',
-    path: '/welcome',
-    handler: function (request, reply) {
-      reply.view('landing', null, {layout: 'welcome'})
+  },
+  {
+    method: 'get',
+    path: '/learn',
+    handler: (requst, reply) => {
+      reply.view('learn')
     }
-  })
-
-  server.route({
-    method: 'GET',
-    path: '/options',
-    handler: function (request, reply) {
-      reply.view('options', null, {layout: 'welcome'})
-    }
-  })
-
-  server.route({
-    method: 'GET',
+  },
+  {
+    method: 'get',
     path: '/listen',
-    handler: function (request, reply) {
+    handler: (requst, reply) => {
       reply.view('listen')
     }
-  })
-
-  server.route({
+  },
+  {
+    method: 'get',
+    path: '/questions',
+    handler: (requst, reply) => {
+      reply.view('questions')
+    }
+  },
+  {
+    method: 'get',
+    path: '/refer',
+    handler: (requst, reply) => {
+      reply.view('refer')
+    }
+  },
+  {
+    method: 'get',
+    path: '/remind',
+    handler: (requst, reply) => {
+      reply.view('remind')
+    }
+  },
+  {
     method: 'GET',
     path: '/public/{param*}',
     handler: {
@@ -85,12 +73,10 @@ server.register(plugins, (err) => {
         path: Path.join(__dirname,'/../public/')
       }
     }
-  })
+  }])
 
-  server.start((error) => {
-    if (error) {
-      throw error
-    }
+  server.start(error => {
+    if (error) throw error
     console.log('Server running at:', server.info.uri)
   })
 })

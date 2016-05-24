@@ -1,9 +1,17 @@
 <div id="referContainer">
   <h1>Refer</h1>
-  {{#each about}}
-  <div class="referParagraph">
-    <h2>{{this.subtitle}}</h2>
-    <p>{{this.paragraph}}</p>
+  <div class="national">
+    {{#each refer.national}}
+    <div>
+      <h2>
+        {{this.section}}
+      </h2>
+        <p>Phone: {{this.info.phone}}</p>
+        <p>Website: <a href={{this.info.link}}>{{this.info.link}}</a></p>
+        <p>{{this.info.advice}}</p>
+    </div>
+    {{/each}}
   </div>
-  {{/each}}
 </div>
+
+

@@ -1,9 +1,12 @@
 <div id="learnContainer">
   <h1>Learn</h1>
-  {{#each about}}
-  <div class="learnParagraph">
-    <h2>{{this.subtitle}}</h2>
-    <p>{{this.paragraph}}</p>
-  </div>
+  {{#each learn}}
+    <div class="aboutParagraph">
+      <h4>{{this.category}}</h4>
+      {{#each this.things_to_know}}
+        <p>{{this}}</p>
+      {{/each}}
+    </div>
   {{/each}}
 </div>
+

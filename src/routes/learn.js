@@ -16,7 +16,7 @@ module.exports = {
         replying += chunk
       })
       res.on('end', () => {
-        reply.view('learn', { learn: JSON.parse(replying) })
+        reply.view('learn', { learn: JSON.parse(replying)})
       })
     })
     req.end()

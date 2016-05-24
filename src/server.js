@@ -1,155 +1,38 @@
 const Hapi = require('hapi')
-const Path = require('path')
-const handlebars = require('handlebars')
 const port = process.env.PORT || 3000
-const http = require('http')
+const Vision = require('vision')
+const Inert = require('inert')
+
+const views = require('./routes/views.js')
+const index = require('./routes/index.js')
+const about = require('./routes/about.js')
+const learn = require('./routes/learn.js')
+const listen = require('./routes/listen.js')
+const questions = require('./routes/questions.js')
+const refer = require('./routes/refer.js')
+const remind = require('./routes/remind.js')
+const publicdir = require('./routes/publicdir.js')
+
+const plugins = [Vision, Inert]
 
 const server = new Hapi.Server()
 
 server.connection({port})
 
-server.register([require('vision'), require('inert')], err => {
+server.register(plugins, err => {
   if (err) throw err
-  server.views({
-    engines: {html: handlebars},
-    relativeTo: __dirname + '/../',
-    path: './views',
-    layoutPath: './views/layout',
-    layout: 'default',
-    //partialsPath: './views/partials/'
-  })
+  server.views(views)
 
-  server.route([{
-    method: 'GET',
-    path: '/',
-    handler: (request, reply) => {
-      reply.view('index')
-    }
-  },
-  {
-    method: 'get',
-    path: '/about',
-    handler: (request, reply) => {
-      var replying = ''
-      const options = {
-        method: 'GET',
-        hostname: 'localhost',
-        port: 4000,
-        path: '/aboutapi'
-      }
-      const req = http.request(options, res => {
-        res.on('data', chunk => {
-          replying += chunk
-        })
-        res.on('end', () => {
-          reply.view('about', { about: JSON.parse(replying) })
-        })
-      })
-      req.end()
-    }
-  },
-  {
-    method: 'get',
-    path: '/learn',
-    handler: (requst, reply) => {
-      reply.view('learn', {
-        about: [
-          {
-            subtitle: 'Title 1',
-            paragraph: 'Lorem Ipsum'
-          },
-          {
-            subtitle: 'Title 2',
-            paragraph: 'Lorem Ipsum sexy Petal'
-          }
-        ]
-      })
-    }
-  },
-  {
-    method: 'get',
-    path: '/listen',
-    handler: (requst, reply) => {
-      reply.view('listen', {
-        about: [
-          {
-            subtitle: 'Title 1',
-            paragraph: 'Lorem Ipsum'
-          },
-          {
-            subtitle: 'Title 2',
-            paragraph: 'Lorem Ipsum sexy Petal'
-          }
-        ]
-      })
-    }
-  },
-  {
-    method: 'get',
-    path: '/questions',
-    handler: (requst, reply) => {
-      reply.view('questions', {
-        about: [
-          {
-            subtitle: 'Title 1',
-            paragraph: 'Lorem Ipsum'
-          },
-          {
-            subtitle: 'Title 2',
-            paragraph: 'Lorem Ipsum sexy Petal'
-          }
-        ]
-      })
-    }
-  },
-  {
-    method: 'get',
-    path: '/refer',
-    handler: (requst, reply) => {
-      reply.view('refer', {
-        about: [
-          {
-            subtitle: 'Title 1',
-            paragraph: 'Lorem Ipsum'
-          },
-          {
-            subtitle: 'Title 2',
-            paragraph: 'Lorem Ipsum sexy Petal'
-          }
-        ]
-      })
-    }
-  },
-  {
-    method: 'get',
-    path: '/remind',
-    handler: (requst, reply) => {
-      reply.view('remind', {
-        about: [
-          {
-            subtitle: 'Title 1',
-            paragraph: 'Lorem Ipsum'
-          },
-          {
-            subtitle: 'Title 2',
-            paragraph: 'Lorem Ipsum sexy Petal'
-          }
-        ]
-      })
-    }
-  },
-  {
-    method: 'GET',
-    path: '/public/{param*}',
-    handler: {
-      directory: {
-        path: Path.join(__dirname,'/../public/')
-      }
-    }
-  }])
-
-  server.start(error => {
-    if (error) throw error
-    console.log('Server running at:', server.info.uri)
-  })
+  server.route([
+    index,
+    about,
+    learn,
+    listen,
+    questions,
+    refer,
+    remind,
+    publicdir
+  ])
 })
+
+module.exports = server

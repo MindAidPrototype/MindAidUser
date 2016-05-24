@@ -1,3 +1,9 @@
 <div id="screenContainer">
   <h1>Screen</h1>
+  {{#each about}}
+  <div class="remindParagraph">
+    <h2>{{this.subtitle}}</h2>
+    <p>{{this.paragraph}}</p>
+  </div>
+  {{/each}}
 </div>

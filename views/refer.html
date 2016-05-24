@@ -1,3 +1,9 @@
 <div id="referContainer">
   <h1>Refer</h1>
+  {{#each about}}
+  <div class="referParagraph">
+    <h2>{{this.subtitle}}</h2>
+    <p>{{this.paragraph}}</p>
+  </div>
+  {{/each}}
 </div>

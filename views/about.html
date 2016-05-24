@@ -1,3 +1,9 @@
 <div id="aboutContainer">
   <h1>About</h1>
+  {{#each about}}
+  <div class="aboutParagraph">
+    <h2>{{this.subtitle}}</h2>
+    <p>{{this.paragraph}}</p>
+  </div>
+  {{/each}}
 </div>

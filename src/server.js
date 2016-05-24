@@ -27,42 +27,108 @@ server.register([require('vision'), require('inert')], err => {
     method: 'get',
     path: '/about',
     handler: (request, reply) => {
-      reply.view('about')
+      reply.view('about', {
+        about: [
+          {
+            subtitle: 'Title 1',
+            paragraph: 'Lorem Ipsum'
+          },
+          {
+            subtitle: 'Title 2',
+            paragraph: 'Lorem Ipsum sexy Petal'
+          }
+        ]
+      })
     }
   },
   {
     method: 'get',
     path: '/learn',
     handler: (requst, reply) => {
-      reply.view('learn')
+      reply.view('learn', {
+        about: [
+          {
+            subtitle: 'Title 1',
+            paragraph: 'Lorem Ipsum'
+          },
+          {
+            subtitle: 'Title 2',
+            paragraph: 'Lorem Ipsum sexy Petal'
+          }
+        ]
+      })
     }
   },
   {
     method: 'get',
     path: '/listen',
     handler: (requst, reply) => {
-      reply.view('listen')
+      reply.view('listen', {
+        about: [
+          {
+            subtitle: 'Title 1',
+            paragraph: 'Lorem Ipsum'
+          },
+          {
+            subtitle: 'Title 2',
+            paragraph: 'Lorem Ipsum sexy Petal'
+          }
+        ]
+      })
     }
   },
   {
     method: 'get',
     path: '/questions',
     handler: (requst, reply) => {
-      reply.view('questions')
+      reply.view('questions', {
+        about: [
+          {
+            subtitle: 'Title 1',
+            paragraph: 'Lorem Ipsum'
+          },
+          {
+            subtitle: 'Title 2',
+            paragraph: 'Lorem Ipsum sexy Petal'
+          }
+        ]
+      })
     }
   },
   {
     method: 'get',
     path: '/refer',
     handler: (requst, reply) => {
-      reply.view('refer')
+      reply.view('refer', {
+        about: [
+          {
+            subtitle: 'Title 1',
+            paragraph: 'Lorem Ipsum'
+          },
+          {
+            subtitle: 'Title 2',
+            paragraph: 'Lorem Ipsum sexy Petal'
+          }
+        ]
+      })
     }
   },
   {
     method: 'get',
     path: '/remind',
     handler: (requst, reply) => {
-      reply.view('remind')
+      reply.view('remind', {
+        about: [
+          {
+            subtitle: 'Title 1',
+            paragraph: 'Lorem Ipsum'
+          },
+          {
+            subtitle: 'Title 2',
+            paragraph: 'Lorem Ipsum sexy Petal'
+          }
+        ]
+      })
     }
   },
   {

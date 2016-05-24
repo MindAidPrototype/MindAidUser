@@ -1,3 +1,9 @@
 <div id="listenContainer">
   <h1>Listen</h1>
+  {{#each about}}
+  <div class="listenParagraph">
+    <h2>{{this.subtitle}}</h2>
+    <p>{{this.paragraph}}</p>
+  </div>
+  {{/each}}
 </div>

@@ -68,7 +68,7 @@ a {
   width: 94%;
 }
 
-#aboutContainer h1 {
+#aboutContainer h1, h2, p {
   text-align: center;
 }
 
@@ -79,7 +79,7 @@ a {
   width: 94%;
 }
 
-#learnContainer h1 {
+#learnContainer h1, h2, p {
   text-align: center;
 }
 
@@ -90,7 +90,7 @@ a {
   width: 94%;
 }
 
-#listenContainer h1 {
+#listenContainer h1, h2, p {
   text-align: center;
 }
 
@@ -101,7 +101,7 @@ a {
   width: 94%;
 }
 
-#questionsContainer h1 {
+#questionsContainer h1, h2, p {
   text-align: center;
 }
 
@@ -112,7 +112,7 @@ a {
   width: 94%;
 }
 
-#referContainer h1 {
+#referContainer h1, h2, p {
   text-align: center;
 }
 
@@ -123,7 +123,7 @@ a {
   width: 94%;
 }
 
-#remindContainer h1 {
+#remindContainer h1, h2, p {
   text-align: center;
 }
 
@@ -134,7 +134,7 @@ a {
   width: 94%;
 }
 
-#screenContainer h1 {
+#screenContainer h1, h2, p {
   text-align: center;
 }
 

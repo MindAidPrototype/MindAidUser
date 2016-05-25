@@ -35,3 +35,4 @@ const testEndpoint = endpoint => {
 
 combined.forEach(el => testEndpoint(el))
 
+

@@ -35,4 +35,29 @@ const testEndpoint = endpoint => {
 
 combined.forEach(el => testEndpoint(el))
 
+tape('tests params* route to see if it findes the correct public files', t => {
+  var options1 = {
+    method: 'get',
+    url: '/public/js/script.js'
+  }
+  server.inject(options1, res => {
+    const actual1 = res.statusCode
+    const expected1 = 200
+    const actual2 = res.payload.indexOf('console.log') > -1
+    t.equal(actual1, expected1)
+    t.ok(actual2)
+  })
+  var options2 = {
+    method: 'get',
+    url: '/public/css/main.css'
+  }
+  server.inject(options2, res => {
+    const actual1 = res.statusCode
+    const expected1 = 200
+    const actual2 = res.payload.indexOf('background') > -1
+    t.equal(actual1, expected1)
+    t.ok(actual2)
+    t.end()
+  })
+})
 

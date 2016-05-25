@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/start.js",
-    "startmon": "nodemon src/start.js"
+    "startmon": "nodemon src/start.js",
+    "test": "node src/tests/runner.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,9 @@
     "inert": "^4.0.0",
     "path": "^0.12.7",
     "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "shot": "^3.0.1",
+    "tape": "^4.5.1"
   }
 }

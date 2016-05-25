@@ -14,7 +14,6 @@ server.connection({port})
 server.register(plugins, err => {
   if (err) throw err
   server.views(views)
-
   server.route([
     require('./routes/index.js'),
     require('./routes/about.js'),

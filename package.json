@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/start.js",
     "startmon": "nodemon src/start.js",
-    "test": "node src/tests/runner.js"
+    "test": "node src/tests/runner.js",
+    "testmon": "nodemon src/tests/runner.js"
   },
   "repository": {
     "type": "git",

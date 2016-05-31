@@ -19,7 +19,7 @@ server.register(plugins, err => {
     require('./routes/about.js'),
     require('./routes/learn.js'),
     require('./routes/listen.js'),
-    require('./routes/questions.js'),
+    require('./routes/screen.js'),
     require('./routes/refer.js'),
     require('./routes/remind.js'),
     require('./routes/publicdir.js')

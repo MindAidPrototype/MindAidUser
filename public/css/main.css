@@ -1,150 +1,67 @@
 body {
-  margin: 0;
+  overflow-x: hidden;
 }
 
-#logo {
-  height: 6vw;
-  margin-left: 1.5vw;
-}
-
-#navbar {
+nav {
+  background-color: #f9d423;
+  color: black;
   position: fixed;
-  width: 100%;
-  background-color: #E3E3E3;
-  padding: 0.5vw;
 }
 
-a {
-  text-decoration: none;
+nav a {
   color: black;
 }
 
-#homeLink {
-  float: right;
-  margin: 2vw 2vw 0 0;
-  font-size: 2vw;
-  color: white;
+.welcome {
+  text-align: center;
 }
 
-#footer {
-  background-color: #6DD0F8;
-  height: 60px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  color: white;
-  padding: 1vw 0 0 1vw;
-}
-
-#footer p {
+.options {
   margin: 20px 0;
 }
 
-#homeContainer {
+.landing {
+  text-align: center;
+}
+
+.landing div {
+  margin: 30px 0;
+}
+
+/*listen page*/
+
+#letterL {
+  background-color: orange;
+}
+
+.letters {
+  height: 60px;
+  display: block;
+}
+
+.description {
+  height: auto;
+  background-color: #F3B251;
+}
+
+.description h4 {
+  margin-top: 0px;
+}
+
+.listen {
+  max-height: 70vh;
+}
+
+footer {
+  background-color: #333;
+  color: white;
   position: absolute;
-}
-
-#homeList {
-  position: absolute;
-  left: 37%;
-  top: 8vw;
-}
-
-#homeList li {
-  list-style-type: none;
-  text-align: center;
-  margin: auto;
-  width: 60%;
-  border: 1px solid #E3E3E3;
-  border-radius: 5%;
-  margin: 1vw;
-  padding: 0.5vw 3vw;
-}
-
-#aboutContainer {
-  margin: 0 auto;
-  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;
-}
-
-#aboutContainer h1, h2, p {
-  text-align: center;
-}
-
-#learnContainer {
-  margin: 0 auto;
-  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;
-}
-
-#learnContainer h1, h2, p {
-  text-align: center;
-}
-
-#listenContainer {
-  margin: 0 auto;
-  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;
-}
-
-#listenContainer h1, h2, p {
-  text-align: center;
-}
-
-#questionsContainer {
-  margin: 0 auto;
-  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;
-}
-
-#questionsContainer h1, h2, p {
-  text-align: center;
-}
-
-#referContainer {
-  margin: 0 auto;
-  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;
-}
-
-#referContainer h1, h2, p {
-  text-align: center;
-}
-
-#remindContainer {
-  margin: 0 auto;
-  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;
-}
-
-#remindContainer h1, h2, p {
-  text-align: center;
-}
-
-#screenContainer {
-  margin: 0 auto;
-  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;
-}
-
-#screenContainer h1, h2, p {
-  text-align: center;
-}
-
-#questionFrame {
-  z-index: -1;
-  position: absolute;
-  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
+  height: 60px;
+  position: fixed;
 }
 
-@media screen and (max-width: 500px) {
+footer p {
+  margin: 20px 0;
 }

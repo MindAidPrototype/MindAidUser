@@ -2,17 +2,46 @@
 <html>
   <head>
     <link rel="stylesheet" href="../../public/css/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-    <title>MindAid User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MindAid</title>
   </head>
   <body>
-    <nav id="navbar">
-      <a href="/"><img id="logo" src="../public/assets/mindAidlogo.png"></a>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            MENU
+          </button>
+          <a class="navbar-brand" href="/">MindAid</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/listen">Listen</a></li>
+            <li><a href="/learn">Resources</a></li>
+            <li><a href="/screen">Screen</a></li>
+            <li><a href="/refer">Refer</a></li>
+            <li><a href="/remind">Remind</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Sign Up</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <div>{{{content}}}</div>
-    <footer id="footer">
-      <p>MindAid</p>
-    </footer>
+    <div class="content container">
+    {{{content}}}
+    </div>
+
+  <footer>
+    <div class="container">
+      <p>blah</p>
+    </div>
+  </footer>
     <script src="../public/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </body>
 </html>

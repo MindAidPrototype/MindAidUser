@@ -16,6 +16,7 @@ module.exports = {
         replying += chunk
       })
       res.on('end', () => {
+        console.log(replying)
         reply.view('about', { about: JSON.parse(replying) })
       })
     })

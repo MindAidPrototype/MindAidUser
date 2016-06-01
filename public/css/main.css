@@ -3,13 +3,23 @@ body {
 }
 
 nav {
-  background-color: #f9d423;
+  background-color: #f8f8f8;
   color: black;
   position: fixed;
 }
 
 nav a {
   color: black;
+}
+
+nav navbar-nav li {
+  padding-top: 30px;
+  padding-left: 24px;
+}
+
+#logo {
+  height: 4vw;
+  margin-left: 1.5vw;
 }
 
 .welcome {
@@ -53,7 +63,7 @@ nav a {
 }
 
 footer {
-  background-color: #333;
+  background-color: #282828;
   color: white;
   position: absolute;
   bottom: 0;

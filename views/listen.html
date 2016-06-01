@@ -1,51 +1,40 @@
-<div class="listen">
-  <h1>Listen</h1>
-  <div class="row">
-    <div class="col-md-2 col-sm-12">
-      <h2>L</h2>
-      <p>{{listen.listen.letterL}}</p>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <h2>I</h2>
-      <p>{{listen.listen.letterI}}</p>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <h2>S</h2>
-      <p>{{listen.listen.letterS}}</p>
-    </div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Listen</h3>
+  </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-2 col-sm-12">
+          <h2>L</h2>
+          <p>{{listen.listen.letterL}}</p>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h2>I</h2>
+          <p>{{listen.listen.letterI}}</p>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h2>S</h2>
+          <p>{{listen.listen.letterS}}</p>
+        </div>
 
-    <div class="col-md-2 col-sm-12">
-      <h2>L</h2>
-      <p>{{listen.listen.letterT}}</p>
+        <div class="col-md-2 col-sm-12">
+          <h2>T</h2>
+          <p>{{listen.listen.letterT}}</p>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h2>E</h2>
+          <p>{{listen.listen.letterE}}</p>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h2>N</h2>
+          <p>{{listen.listen.letterN}}</p>
+        </div>
+      </div>
+      <div class="conversationStarters">
+        <h1>Conversation starters</h1>
+        {{#each listen.conversation_starters}}
+          <p>{{this}}</p>
+        {{/each}}
+      </div>
     </div>
-    <div class="col-md-2 col-sm-12">
-      <h2>I</h2>
-      <p>{{listen.listen.letterE}}</p>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <h2>S</h2>
-      <p>{{listen.listen.letterN}}</p>
-    </div>
-  </div>
-  <div class="conversationStarters">
-    <h1>Conversation starters</h1>
-    {{#each listen.conversation_starters}}
-      <p>{{this}}</p>
-    {{/each}}
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-  </div>
 </div>

@@ -7,8 +7,7 @@ module.exports = {
     var replying = ''
     const options = {
       method: 'GET',
-      hostname: 'localhost',
-      port: 4000,
+      hostname: 'mindaidadmin.herokuapp.com',
       path: '/referapi'
     }
     const req = http.request(options, res => {
@@ -16,7 +15,7 @@ module.exports = {
         replying += chunk
       })
       res.on('end', () => {
-        reply.view('refer', { refer: JSON.parse(replying)[0] })
+        reply.view('refer', { refer: JSON.parse(replying)})
       })
     })
     req.end()

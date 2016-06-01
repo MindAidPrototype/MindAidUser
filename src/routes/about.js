@@ -7,8 +7,7 @@ module.exports = {
     var replying = ''
     const options = {
       method: 'GET',
-      hostname: 'localhost',
-      port: 4000,
+      hostname: 'mindaidadmin.herokuapp.com',
       path: '/aboutapi'
     }
     const req = http.request(options, res => {
@@ -16,7 +15,7 @@ module.exports = {
         replying += chunk
       })
       res.on('end', () => {
-        console.log(replying)
+        console.log(JSON.parse(replying))
         reply.view('about', { about: JSON.parse(replying) })
       })
     })

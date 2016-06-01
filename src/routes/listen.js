@@ -7,8 +7,7 @@ module.exports = {
     var replying = ''
     const options = {
       method: 'GET',
-      hostname: 'localhost',
-      port: 4000,
+      hostname: 'mindaidadmin.herokuapp.com',
       path: '/listenapi'
     }
     const req = http.request(options, res => {
@@ -16,7 +15,7 @@ module.exports = {
         replying += chunk
       })
       res.on('end', () => {
-        reply.view('listen', { listen: JSON.parse(replying)[0] })
+        reply.view('listen', {conversationStarters: JSON.parse(replying) })
       })
     })
     req.end()

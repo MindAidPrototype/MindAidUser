@@ -7,8 +7,7 @@ module.exports = {
     var replying = ''
     const options = {
       method: 'GET',
-      hostname: 'localhost',
-      port: 4000,
+      hostname: 'mindaidadmin.herokuapp.com',
       path: '/learnapi'
     }
     const req = http.request(options, res => {

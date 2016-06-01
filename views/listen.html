@@ -1,51 +1,6 @@
-<div class="listen">
-  <h1>Listen</h1>
-  <div class="row">
-    <div class="col-md-2 col-sm-12">
-      <h2>L</h2>
-      <p>{{listen.listen.letterL}}</p>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <h2>I</h2>
-      <p>{{listen.listen.letterI}}</p>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <h2>S</h2>
-      <p>{{listen.listen.letterS}}</p>
-    </div>
-
-    <div class="col-md-2 col-sm-12">
-      <h2>L</h2>
-      <p>{{listen.listen.letterT}}</p>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <h2>I</h2>
-      <p>{{listen.listen.letterE}}</p>
-    </div>
-    <div class="col-md-2 col-sm-12">
-      <h2>S</h2>
-      <p>{{listen.listen.letterN}}</p>
-    </div>
+<h2 id='convoStarter'>Conversation Starters</h2>
+{{#each conversationStarters}}
+  <div class="listenSection">
+    <p>{{this.question}}</p>
   </div>
-  <div class="conversationStarters">
-    <h1>Conversation starters</h1>
-    {{#each listen.conversation_starters}}
-      <p>{{this}}</p>
-    {{/each}}
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-    <p>
-      testfsdgjsldgjfsl
-    </p>
-  </div>
-</div>
+{{/each}}

@@ -1,10 +1,16 @@
-<div class="panel-body">
-  {{#each about}}
-  <div class="aboutSection">
-    <h4>{{this.subtitle}}</h4>
-        {{#each this.paragraph}}
-        <p>{{this}}</p>
-        {{/each}}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">About</h3>
   </div>
-  {{/each}}
+  <div class="panel-body">  
+      {{#each about}}
+      <div class="aboutSection">
+        <h4>{{this.subtitle}}</h4>
+            {{#each this.paragraph}}
+            <p>{{this}}</p>
+            {{/each}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
 </div>

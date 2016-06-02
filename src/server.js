@@ -15,7 +15,7 @@ const server = new Hapi.Server()
 server.connection({port})
 
 server.state('cookie', {
-  ttl: 60 * 1000,
+  ttl: 60 * 60 * 1000,
   isHttpOnly: true,
   encoding: 'iron',
   password: process.env.IRONPASSWORD
@@ -33,6 +33,7 @@ server.register(plugins, err => {
     require('./routes/refer.js'),
     require('./routes/remind.js')(client),
     require('./routes/login.js'),
+    require('./routes/logout.js'),
     require('./routes/authenticate.js')(client),
     require('./routes/newStudentInfo.js')(client),
     require('./routes/createNewUser.js')(client),

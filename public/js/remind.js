@@ -6,7 +6,7 @@ function submitNewStudent() {
   const xhr = new XMLHttpRequest()
   xhr.onreadystatechange = function() {
     if(xhr.readyState === 4 && xhr.status === 200) {
-      if (xhr.responseText === 'stored in database') {
+      if (xhr.responseText) {
         window.location.href = '/remind'
       }
     }
@@ -29,3 +29,16 @@ function showStudents() {
 }
 
 document.getElementById('showStudents').addEventListener('click', showStudents)
+
+function logout() {
+  const xhr = new XMLHttpRequest()
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState === 4 && xhr.status === 200) {
+      window.location.href = '/remind'
+    }
+  }
+  xhr.open('get', '/logout')
+  xhr.send()
+}
+
+document.getElementById('logout').addEventListener('click', logout)

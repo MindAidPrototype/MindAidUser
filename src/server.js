@@ -36,7 +36,7 @@ server.register(plugins, err => {
     require('./routes/logout.js'),
     require('./routes/authenticate.js')(client),
     require('./routes/newStudentInfo.js')(client),
-    require('./routes/createNewUser.js')(client),
+    require('./routes/createNewUser.js')(client, process.env.NEWUSERSECRET),
     require('./routes/publicdir.js')
   ])
 })

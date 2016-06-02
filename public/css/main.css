@@ -59,7 +59,7 @@ nav navbar-nav li {
 }
 
 .menu:hover {
-  color: #1345B7;
+  color: #fff;
   text-decoration: none;
   background: -webkit-linear-gradient(#fff, #6DD0F8);
 }

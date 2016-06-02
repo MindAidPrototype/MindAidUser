@@ -1,13 +1,34 @@
 <div class="jumbotron">
-    <h3>About</h3>
-  <div class="panel-body">  
-      {{#each about}}
-      <div class="aboutSection">
-        <h4>{{this.subtitle}}</h4>
-            {{#each this.paragraph}}
-            <p>{{this}}</p>
-            {{/each}}
+  <div class="page-header">
+    <div class="row rowRefer">
+      <div class="col-md-2 col-sm-12">
+        <h2 class="l">A</h2>
       </div>
-      {{/each}}
+      <div class="col-md-2 col-sm-12"> 
+        <h2 class="i">B</h2> 
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <h2 class="s">O</h2>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <h2 class="t">U</h2>
+      </div>
+      <div class="col-md-2 col-sm-12">
+        <h2 class="e">T</h2>
+      </div>
     </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body">  
+        {{#each about}}
+        <div class="aboutSection">
+          <h4>{{this.subtitle}}</h4>
+              {{#each this.paragraph}}
+              <p>{{this}}</p>
+              {{/each}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
 </div>

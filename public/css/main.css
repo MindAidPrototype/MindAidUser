@@ -24,7 +24,8 @@ nav navbar-nav li {
 }
 
 .panel-heading {
-  background-color: #6DD0F8 !important;
+  background: -webkit-linear-gradient(left, #D1007F, #720BB7, #3716BC, #1345B7, #00A8A8, #00D10E) !important;
+  /*background-color: #6DD0F8 !important;*/
   color: white !important;
 }
 
@@ -175,6 +176,16 @@ padding-bottom: 40px;
   background: -webkit-linear-gradient(#00A8A8, #00D10E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* refer page  and learn*/
+.rowRefer {
+  padding-left: 172px;
+}
+
+/* screen page */
+.rowScreen {
+  padding-left: 100px;
 }
 
 /* footer */

@@ -1,12 +1,17 @@
-module.exports = (client) => ({
-  method: 'get',
-  path: '/createNewUser/{username}/{password}',
+module.exports = (client, newUserSecret) => ({
+  method: 'post',
+  path: '/createNewUser',
   handler: (request, reply) => {
-    const user = request.params.username
-    const password = request.params.password
-    client.hmset(user, 'p', password, (err, res) => {
-      if(err) throw err
-      reply(res)
-    })
+    const apiRequest = request.payload
+    const user = apiRequest.user
+    const password = apiRequest.pass
+    if(apiRequest.newUserSecret === newUserSecret) {
+      client.hmset(user, 'p', password, (err, res) => {
+        if(err) throw err
+        reply(res)
+      })
+    } else {
+      reply('unlucky')
+    }
   }
 })

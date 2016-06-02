@@ -1,7 +1,4 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-  <h3 class="panel-title">Listen</h3>
-  </div>
+<div class="jumbotron">
   <div class="panel-body">
     <div class="row">
       <div class="col-md-2 col-sm-12">
@@ -29,11 +26,16 @@
         <p class="np">Not alone, follow up and direct to appropriate professional help</p>
       </div>
     </div>
-    <h2 id='convoStarter'>Conversation Starters</h2>
-    {{#each conversationStarters}}
-      <div class="listenSection">
-        <p>{{this.question}}</p>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 id='convoStarter' class="panel-title">Conversation Starters</h3>
       </div>
-    {{/each}}
-  </div>
+      <div class="panel-body">
+        {{#each conversationStarters}}
+        <div class="listenSection">
+          <p>{{this.question}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div> 
 </div>

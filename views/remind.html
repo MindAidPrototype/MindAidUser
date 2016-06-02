@@ -1,24 +1,30 @@
-<div id="remindContainer">
-  <h1>Remind</h1>
-  <h3>New Student</h3>
+<div class="panel panel-default">
+  <div id="remindContainer">
+    <div class="panel-heading">
+      <h3 class="panel-title">Remind</h3>
+    </div>
+    <h3>New Student</h3>
 
-  <div id="newStudentContainer">
-    <span> student name: </span><input id="newStudentName"/>
-    <span> score: </span><input id="newStudentScore" />
-    <span> class: </span><input id="newStudentClass" />
-    <span> date: </span><input id="newStudentDate" />
-    <button id="submitNewStudent">submit</button>
-  </div>
+    <div class="panel-body">
+      <div id="newStudentContainer">
+        <span> student name: </span><input id="newStudentName"/>
+        <span> score: </span><input id="newStudentScore" />
+        <span> class: </span><input id="newStudentClass" />
+        <span> date: </span><input id="newStudentDate" />
+        <button id="submitNewStudent">submit</button>
+      </div>
 
-  <button id="showStudents">show your students</button>
+      <button id="showStudents">show your students</button>
 
-  <div id="studentsContainer" style="visibility:hidden">
-    {{#each remind}}
-      <span> student name: </span><div>{{this.sname}}</div>
-      <span> score: </span><div>{{this.score}}</div>
-      <span> class: </span><div>{{this.stclass}}</div>
-      <span> date: </span><div>{{this.date}}</div>
-    {{/each}}
+      <div id="studentsContainer" style="visibility:hidden">
+        {{#each remind}}
+          <span> student name: </span><div>{{this.sname}}</div>
+          <span> score: </span><div>{{this.score}}</div>
+          <span> class: </span><div>{{this.stclass}}</div>
+          <span> date: </span><div>{{this.date}}</div>
+        {{/each}}
+      </div>
+    </div>
   </div>
 </div>
 

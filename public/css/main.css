@@ -2,6 +2,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Navbar */
 nav {
   background-color: #f8f8f8;
   color: black;
@@ -22,6 +23,11 @@ nav navbar-nav li {
   margin-left: 1.5vw;
 }
 
+.panel-heading {
+  background-color: #6DD0F8 !important;
+  color: white !important;
+}
+
 .welcome {
   text-align: center;
 }
@@ -38,22 +44,31 @@ nav navbar-nav li {
   margin: 30px 0;
 }
 
-/*listen page*/
-
-#letterL {
-  background-color: orange;
-}
-
-.letters {
-  height: 60px;
+/* index page buttons */
+.menu {
   display: block;
+  width: 100px;
+  height: 100px; 
+  border-radius: 50px;
+  font-size: 20px;
+  color: #fff; 
+  line-height: 100px;
+  text-align: center;
+  text-decoration: none;
+  background: #6DD0F8;
 }
 
-.description {
-  height: auto;
-  background-color: #F3B251;
+.menu:hover {
+  color: #1345B7;
+  text-decoration: none;
+  background: -webkit-linear-gradient(#fff, #6DD0F8);
 }
 
+.row1 row2 {
+padding-bottom: 40px;
+}
+
+/*listen page*/
 .description h4 {
   margin-top: 0px;
 }
@@ -62,8 +77,71 @@ nav navbar-nav li {
   max-height: 70vh;
 }
 
+.l {
+  color: #D1007F;
+  align-content: center;
+  position: center;
+}
+
+.lp {
+  background: -webkit-linear-gradient(#720BB7, #D1007F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.i {
+  color: #720BB7;
+}
+
+.ip {
+  background: -webkit-linear-gradient(#D1007F, #720BB7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.s {
+  color: #3716BC;
+}
+
+.sp {
+  background: -webkit-linear-gradient(#1345B7, #3716BC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.t {
+  color: #1345B7;
+}
+
+.tp {
+  background: -webkit-linear-gradient(#3716BC, #1345B7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.e {
+  color: #00A8A8;
+}
+
+.ep {
+  background: -webkit-linear-gradient(#00D10E, #00A8A8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.n {
+  color: #00D10E;
+}
+
+.np {
+  background: -webkit-linear-gradient(#00A8A8, #00D10E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* footer */
 footer {
-  background-color: #282828;
+  background-color: #6DD0F8;
   color: white;
   position: absolute;
   bottom: 0;

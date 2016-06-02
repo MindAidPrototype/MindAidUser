@@ -4,7 +4,7 @@ module.exports = (client) => ({
   handler: (request, reply) => {
     const user = request.params.username
     const password = request.params.password
-    client.hmset(user, 'p', password, 's', [], (err, res) => {
+    client.hmset(user, 'p', password, (err, res) => {
       if(err) throw err
       reply(res)
     })

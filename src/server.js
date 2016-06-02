@@ -5,8 +5,6 @@ const Inert = require('inert')
 const client = require('redis').createClient()
 require('env2')('./config.env')
 
-const cookie = process.env.COOKIE
-
 const views = require('./routes/views.js')
 
 const plugins = [Vision, Inert]
@@ -14,6 +12,13 @@ const plugins = [Vision, Inert]
 const server = new Hapi.Server()
 
 server.connection({port})
+
+server.state('cookie', {
+  ttl: 60 * 1000,
+  isHttpOnly: true,
+  encoding: 'iron',
+  password: process.env.IRONPASSWORD
+})
 
 server.register(plugins, err => {
   if (err) throw err
@@ -27,8 +32,8 @@ server.register(plugins, err => {
     require('./routes/refer.js'),
     require('./routes/remind.js')(client),
     require('./routes/login.js'),
-    require('./routes/authenticate.js')(client, cookie),
-    //require('./routes/newStudentInfo.js')(client, cookie),
+    require('./routes/authenticate.js')(client),
+    require('./routes/newStudentInfo.js')(client),
     require('./routes/createNewUser.js')(client),
     require('./routes/publicdir.js')
   ])

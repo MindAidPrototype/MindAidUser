@@ -20,3 +20,13 @@ function submitNewStudent() {
     date
   }))
 }
+
+document.getElementById('submitNewStudent').addEventListener('click', submitNewStudent)
+
+function showStudents() {
+  const studentsContainer = document.getElementById('studentsContainer')
+  studentsContainer.style.visibility === 'visible' ?
+    studentsContainer.style.visibility = 'hidden' : studentsContainer.style.visibility = 'visible'
+}
+
+document.getElementById('showStudents').addEventListener('click', showStudents)

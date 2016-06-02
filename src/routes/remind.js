@@ -1,18 +1,16 @@
-module.exports = {
+module.exports = (client) => ({
   method: 'get',
   path: '/remind',
-  handler: (requst, reply) => {
-    reply.view('remind', {
-      about: [
-        {
-          subtitle: 'Title 1',
-          paragraph: 'Lorem Ipsum'
-        },
-        {
-          subtitle: 'Title 2',
-          paragraph: 'Lorem Ipsum sexy Petal'
-        }
-      ]
-    })
+  handler: (request, reply) => {
+    const user = request.state.cookie
+    if(user) {
+      client.hgetall(user, (err, res) => {
+        reply.view('remind', {
+          remind: JSON.parse(res.s)
+        })
+      })
+    } else {
+      reply.redirect('/login')
+    }
   }
-}
+})

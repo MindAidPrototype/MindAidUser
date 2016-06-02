@@ -1,9 +1,31 @@
 <div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Remind</h3>
-  </div>
   <div id="remindContainer">
+    <div class="panel-heading">
+      <h3 class="panel-title">Remind</h3>
+    </div>
+    <h3>New Student</h3>
+
     <div class="panel-body">
+      <div id="newStudentContainer">
+        <span> student name: </span><input id="newStudentName"/>
+        <span> score: </span><input id="newStudentScore" />
+        <span> class: </span><input id="newStudentClass" />
+        <span> date: </span><input id="newStudentDate" />
+        <button id="submitNewStudent">submit</button>
+      </div>
+
+      <button id="showStudents">show your students</button>
+
+      <div id="studentsContainer" style="visibility:hidden">
+        {{#each remind}}
+          <span> student name: </span><div>{{this.sname}}</div>
+          <span> score: </span><div>{{this.score}}</div>
+          <span> class: </span><div>{{this.stclass}}</div>
+          <span> date: </span><div>{{this.date}}</div>
+        {{/each}}
+      </div>
     </div>
   </div>
-</div> 
+</div>
+
+<script type="text/javascript" src='./public/js/remind.js'></script>

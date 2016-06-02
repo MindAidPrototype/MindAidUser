@@ -1,8 +1,15 @@
 <div class="jumbotron">
-  <h1>Login Page</h1>
-  <span>username: </span><input id="username">
-  <span>password: </span><input id="password">
-  <button id="loginButton">submit</button>
-  <div id="response"></div>
-  <script src="../public/js/login.js"></script>
-<div>
+<div id="loginContainer">
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Please login</h2>
+    <label for="inputUser" class="sr-only">User name</label>
+    <input id="username" type="username" id="username" class="form-control" placeholder="User name" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input id="password" type="password" id="password" class="form-control" placeholder="Password" required>
+    <div id="buttonContainer">
+      <button id="loginButton" class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </div>
+    <div id="response"></div>
+    <script src="../public/js/login.js"></script>
+  <div>
+</div>

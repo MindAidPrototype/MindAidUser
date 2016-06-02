@@ -177,6 +177,16 @@ padding-bottom: 40px;
   -webkit-text-fill-color: transparent;
 }
 
+/* refer page  and learn*/
+.rowRefer {
+  padding-left: 172px;
+}
+
+/* screen page */
+.rowScreen {
+  padding-left: 100px;
+}
+
 /* footer */
 /*footer {
   background-color: #6DD0F8;

@@ -6,7 +6,6 @@ function submitNewStudent() {
   const xhr = new XMLHttpRequest()
   xhr.onreadystatechange = function() {
     if(xhr.readyState === 4 && xhr.status === 200) {
-      console.log(xhr.responseText)
       if (xhr.responseText === 'stored in database') {
         window.location.href = '/remind'
       }

@@ -7,9 +7,6 @@ const login = () => {
       if (xhr.responseText === '1'){
         window.location.href = '/remind'
       }
-      else {
-        console.log(xhr.responseText)
-      }
     }
   }
   xhr.open('post', '/authenticate')

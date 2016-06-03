@@ -161,6 +161,22 @@ padding-bottom: 40px;
   padding-left: 100px;
 }
 
+.letterSize {
+  font-size: 30px;
+  letter-spacing: 2em;
+  text-align: center;
+}
+
+@media screen and (max-width: 1202px) {
+
+  .letterSize {
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+}
+
 /* footer */
 /*footer {
   background-color: #6DD0F8;

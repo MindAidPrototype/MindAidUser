@@ -76,40 +76,9 @@ nav navbar-nav li {
 padding-bottom: 40px;
 }
 
-/*.menuListen {
-  padding: 50px 20px;
-  margin: 0px -200px;
-}
-
-.menuLearn {
-  padding: 50px 20px;
-  margin: 0px -63px;
-}
-
-.menuRefer {
-  padding: 50px 20px;
-  margin: 0px 65px;
-}
-
-.menuScreen {
-  padding: 50px 20px;
-  margin: 0px -200px;
-}
-
-.menuRemind {
-  padding: 50px 20px;
-  margin: 0px -63px;
-}
-
-.menuAbout {
-  padding: 50px 20px;
-  margin: 0px 65px;
-}*/
-
 .menuCircle {
   padding: 50px 20px;
   margin: auto;
-
 }
 /*listen page*/
 .description h4 {

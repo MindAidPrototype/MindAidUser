@@ -4,8 +4,8 @@
       <div class="col-md-2 col-sm-12">
         <h2 class="l">R</h2>
       </div>
-      <div class="col-md-2 col-sm-12"> 
-        <h2 class="i">E</h2> 
+      <div class="col-md-2 col-sm-12">
+        <h2 class="i">E</h2>
       </div>
       <div class="col-md-2 col-sm-12">
         <h2 class="s">F</h2>
@@ -26,15 +26,11 @@
             <h3 class="panel-title">National</h3>
           </div>
           <div class="panel-body">
-            {{#each refer}}
-              {{#each this.national}}
-                <div>
-                  <p>Section: {{this.section}}</p>
-                  <p>Phone: {{this.phone}}</p>
-                  <p>Website: <a href={{this.link}}>{{this.link}}</a></p>
-                  <p>{{this.advice}}</p>
-                </div>
-              {{/each}}
+            {{#each refer.national.data}}
+            <h4>{{this.section}}</h4>
+            <p>Phone: <span>{{this.phone}}</span></p>
+            <p>Website: <span>{{this.link}}</span></p>
+            <p><span>{{this.advice}}</span></p>
             {{/each}}
           </div>
         </div>
@@ -44,16 +40,12 @@
             <h3 class="panel-title">In School</h3>
           </div>
           <div class="panel-body">
-            {{#each refer}}
-              {{#each this.inSchool}}
-                <div>
-                  <h3>Name: {{this.name}} </h3>
-                  <p>Postion: {{this.position}}</p>
-                  <p>Description: {{this.description}}</p>
-                  <p>Email: {{this.email}}</p>
-                  <p>Phone: {{this.phone}} </p>
-                </div>
-              {{/each}}
+            {{#each refer.school.data}}
+            <p>Name: <span>{{this.name}}</span></p>
+            <p>Postion: <span>{{this.position}}</span></p>
+            <p>Description: <span>{{this.description}}</span></p>
+            <p>Email: <span>{{this.email}}</span></p>
+            <p>Phone: <span>{{this.phone}}</span></p>
             {{/each}}
           </div>
         </div>
@@ -63,21 +55,16 @@
             <h3 class="panel-title">In Community</h3>
           </div>
           <div class="panel-body">
-            {{#each refer}}
-              {{#each this.inCommunity}}
-                <div>
-                  <h3>Name: {{this.name}} </h3>
-                  <p>Postion: {{this.position}}</p>
-                  <p>Description: {{this.description}}</p>
-                  <p>Email: {{this.email}}</p>
-                  <p>Phone: {{this.phone}} </p>
-                  {{#each this.links}}
-                    <p>Name: {{this.name}}</p>
-                    <p>Link: {{this.link}}</p>
-                  {{/each}}
-                </div>
-              {{/each}}
+            {{#each refer.community.data}}
+            <p>Name: <span>{{this.name}}</span></p>
+            <p>Postion: <span>{{this.position}}</span></p>
+            <p>Description: <span>{{this.description}}</span></p>
+            <p>Email: <span>{{this.email}}</span></p>
+            <p>Phone: <span>{{this.phone}}</span></p>
+            {{#each this.links}}
+              <a href={{this.link}}><p>{{this.name}}</p></a>
             {{/each}}
+          {{/each}}
           </div>
         </div>
 
@@ -86,19 +73,14 @@
             <h3 class="panel-title">Self Referral</h3>
           </div>
           <div class="panel-body">
-            {{#each refer}}
-              {{#each this.selfReferral}}
-                <div>
-                  <h3>Service Name: {{this.serviceName}} </h3>
-                  <p>Description: {{this.description}}</p>
-                  <p>Email: {{this.email}}</p>
-                  {{#each this.links}}
-                    <p>Name: {{this.name}}</p>
-                    <p>Link: {{this.link}}</p>
-                  {{/each}}
-                </div>
-              {{/each}}
+            {{#each refer.selfReferral.data}}
+            <h4>{{this.serviceName}}</h4>
+            <p>Description: <span>{{this.description}}</span></p>
+            <p>Email: <span>{{this.email}}</span></p>
+            {{#each this.links}}
+              <a href={{this.link}}><p>{{this.name}}</p></a>
             {{/each}}
+          {{/each}}
           </div>
         </div>
       </div>

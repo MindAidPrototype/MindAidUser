@@ -56,10 +56,10 @@ nav navbar-nav li {
 .menu {
   display: block;
   width: 10em;
-  height: 10em; 
-  border-radius: 12em;
+  height: 10em;
+  border-radius: 100%;
   font-size: 20px;
-  color: #fff; 
+  color: #fff;
   line-height: 100px;
   text-align: center;
   text-decoration: none;
@@ -76,36 +76,10 @@ nav navbar-nav li {
 padding-bottom: 40px;
 }
 
-.menuListen {
+.menuCircle {
   padding: 50px 20px;
-  margin: 0px -200px;
+  margin: auto;
 }
-
-.menuLearn {
-  padding: 50px 20px;
-  margin: 0px -63px;
-}
-
-.menuRefer {
-  padding: 50px 20px;
-  margin: 0px 65px;
-}
-
-.menuScreen {
-  padding: 50px 20px;
-  margin: 0px -200px;
-}
-
-.menuRemind {
-  padding: 50px 20px;
-  margin: 0px -63px;
-}
-
-.menuAbout {
-  padding: 50px 20px;
-  margin: 0px 65px;
-}
-
 /*listen page*/
 .description h4 {
   margin-top: 0px;

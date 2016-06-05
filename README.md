@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/MindAidPrototype/MindAiduser.svg?branch=master)](https://travis-ci.org/MindAidPrototype/MindAiduser)
 # MindAidUser
 
 ## What

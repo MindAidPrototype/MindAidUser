@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/MindAidPrototype/MindAiduser.svg?branch=master)](https://travis-ci.org/MindAidPrototype/MindAiduser)
+[![Build Status](https://travis-ci.org/MindAidPrototype/MindAidUser.svg?branch=master)](https://travis-ci.org/MindAidPrototype/MindAidUser)
 # MindAidUser
 
 ## What

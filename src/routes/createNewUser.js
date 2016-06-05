@@ -1,4 +1,6 @@
-module.exports = (client, newUserSecret) => ({
+const client = require('../redis/client.js')
+
+module.exports = newUserSecret => ({
   method: 'post',
   path: '/createNewUser',
   handler: (request, reply) => {

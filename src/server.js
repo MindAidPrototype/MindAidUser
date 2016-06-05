@@ -2,8 +2,6 @@ const Hapi = require('hapi')
 const port = process.env.PORT || 3000
 const Vision = require('vision')
 const Inert = require('inert')
-const redisURL = process.env.REDIS_URL || '//localhost:6379'
-const client = require('redis').createClient(redisURL)
 require('env2')('./config.env')
 
 const views = require('./routes/views.js')
@@ -31,12 +29,12 @@ server.register(plugins, err => {
     require('./routes/listen.js'),
     require('./routes/screen.js'),
     require('./routes/refer.js'),
-    require('./routes/remind.js')(client),
+    require('./routes/remind.js'),
     require('./routes/login.js'),
     require('./routes/logout.js'),
-    require('./routes/authenticate.js')(client),
-    require('./routes/newStudentInfo.js')(client),
-    require('./routes/createNewUser.js')(client, process.env.NEWUSERSECRET),
+    require('./routes/authenticate.js'),
+    require('./routes/newStudentInfo.js'),
+    require('./routes/createNewUser.js')(process.env.NEWUSERSECRET),
     require('./routes/publicdir.js')
   ])
 })

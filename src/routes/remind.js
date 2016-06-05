@@ -1,4 +1,6 @@
-module.exports = (client) => ({
+const client = require('../redis/client.js')
+
+module.exports = {
   method: 'get',
   path: '/remind',
   handler: (request, reply) => {
@@ -17,4 +19,4 @@ module.exports = (client) => ({
       reply.redirect('/login')
     }
   }
-})
+}

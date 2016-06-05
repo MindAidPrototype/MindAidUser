@@ -1,4 +1,6 @@
-module.exports = (client) => ({
+const client = require('../redis/client.js')
+
+module.exports = {
   method: 'post',
   path: '/authenticate',
   handler: (request, reply) => {
@@ -17,4 +19,4 @@ module.exports = (client) => ({
       }
     })
   }
-})
+}

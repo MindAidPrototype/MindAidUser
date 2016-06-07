@@ -11,13 +11,19 @@
   <div class="panel panel-default">
   <div class="panel-body">
     {{#each learn}}
-      <div class="learnSection">
-        <h2>{{this.category}}</h2>
-        <h3>{{this.subtitle}}</h3>
-        {{#each this.things_to_know}}
-          <p>{{this}}</p>
-        {{/each}}
+    <div class="container">
+      <h2>{{this.category}}</h2>
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{@index}}">{{this.subtitle}}</button>
+      <div id="{{@index}}" class="collapse">
+        <div>
+          {{#each this.thingsToKnow}}
+            <p>{{this}}</p>
+          {{/each}}
+          <a href="{{this.link}}">{{this.link}}</a>
+        </div>
+
       </div>
+    </div>
       <div class="buttonsContainer">
     {{/each}}
     </div>

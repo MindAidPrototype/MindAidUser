@@ -167,6 +167,14 @@ padding-bottom: 40px;
   text-align: center;
 }
 
+.remindInputs {
+  margin: 3% 3%;
+}
+
+#logout {
+  float: right;
+}
+
 @media screen and (max-width: 1202px) {
 
   .letterSize {

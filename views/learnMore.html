@@ -1,6 +1,7 @@
 <div class="jumbotron">
   <div class="page-header">
     <h3>{{learn.category}}</h3>
+    <a href="{{learn.link}}"><p>Learn more on MindEd</p></a>
   </div>
   <div class="panel panel-default">
   <div class="panel-body">
@@ -8,7 +9,6 @@
       {{#each learn.thingsToKnow}}
       <p>{{this}}</p>
       {{/each}}
-      <a href="{{learn.link}}">{{learn.link}}</a>
     </div>
   </div>
 </div>

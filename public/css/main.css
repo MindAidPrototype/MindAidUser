@@ -18,8 +18,17 @@ nav navbar-nav li {
   padding-left: 24px;
 }
 
+.brand {
+  float: left;
+  height: 50px;
+  padding: 0px 0px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+
 #logo {
-  height: 4vw;
+  height: 100%;
   margin-left: 1.5vw;
 }
 
@@ -69,7 +78,8 @@ nav navbar-nav li {
 .menu:hover {
   color: #fff;
   text-decoration: none;
-  background: -webkit-radial-gradient(#6DD0F8, #3716BC);
+  background: -webkit-radial-gradient(rgba(80, 200, 226, 0.65),#0D64E6);
+  text-shadow: 0.5px 0.5px 0.5px #0D82E6;
 }
 
 .row {

@@ -16,7 +16,20 @@ module.exports = {
       })
       res.on('end', () => {
         const re = JSON.parse(replying)
-        reply.view('refer', { refer: {national: re[0], school: re[1], community: re[2], selfReferral: re[3]}})
+        const obj = {}
+        re.forEach((el => {
+          switch (el.identifier) {
+          case 'national': obj.national = el
+            break
+          case 'school': obj.school = el
+            break
+          case 'community': obj.community = el
+            break
+          case 'selfReferral': obj.selfReferral = el
+            break
+          }
+        }))
+        reply.view('refer', {refer: obj})
       })
     })
     req.end()

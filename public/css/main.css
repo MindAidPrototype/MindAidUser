@@ -90,6 +90,47 @@ padding-bottom: 40px;
   padding: 50px 20px;
   margin: auto;
 }
+
+@media screen and (max-width: 991px) { /*767*/
+  .phoneView {
+    text-align: center;
+    background-color: #6DD0F8;
+    height: 70px;
+    width: 70%;
+    border-radius: 10px;
+    padding: 0px;
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: none;
+  }
+
+  .menu {
+    line-height: 70px;
+    text-decoration: none;
+    display: block;
+    width: inherit;
+    height: 70px;
+  }
+  .menuCircle {
+    padding: 0px;
+    margin: auto;
+  }
+
+  .menu:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #6DD0F8;
+    text-shadow: none;
+  }
+
+  .row {
+    padding-bottom: 0px;
+  }
+
+}
 /*listen page*/
 .description h4 {
   margin-top: 0px;

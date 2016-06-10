@@ -35,7 +35,7 @@
             {{#each refer.school.data}}
             <p>Name: <span>{{this.name}}</span></p>
             <p>Postion: <span>{{this.position}}</span></p>
-            <p>Description: <span>{{this.description}}</span></p>
+            <p>{{this.description}}</p>
             <p>Email: <span>{{this.email}}</span></p>
             <p>Phone: <span>{{this.phone}}</span></p>
             {{/each}}
@@ -50,7 +50,7 @@
             {{#each refer.community.data}}
             <p>Name: <span>{{this.name}}</span></p>
             <p>Postion: <span>{{this.position}}</span></p>
-            <p>Description: <span>{{this.description}}</span></p>
+            <p>{{this.description}}</p>
             <p>Email: <span>{{this.email}}</span></p>
             <p>Phone: <span>{{this.phone}}</span></p>
             {{#each this.links}}
@@ -67,7 +67,7 @@
           <div class="panel-body">
             {{#each refer.selfReferral.data}}
             <h3>{{this.serviceName}}</h3>
-            <p>Description: <span>{{this.description}}</span></p>
+            <p>{{this.description}}</p>
             <p>Email: <span>{{this.email}}</span></p>
             {{#each this.links}}
               <a href={{this.link}}><p>{{this.name}}</p></a>

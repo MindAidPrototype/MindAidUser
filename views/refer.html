@@ -20,7 +20,9 @@
             <h3>{{this.section}}</h3>
             <p><span>{{this.advice}}</span></p>
             <p>Phone: <span>{{this.phone}}</span></p>
+            {{#if this.link}}
             <p><a href="{{this.link}}">Visit website</a></p>
+            {{/if}}
             {{/each}}
           </div>
         </div>
@@ -64,7 +66,7 @@
           </div>
           <div class="panel-body">
             {{#each refer.selfReferral.data}}
-            <h4>{{this.serviceName}}</h4>
+            <h3>{{this.serviceName}}</h3>
             <p>Description: <span>{{this.description}}</span></p>
             <p>Email: <span>{{this.email}}</span></p>
             {{#each this.links}}

@@ -91,7 +91,7 @@ padding-bottom: 40px;
   margin: auto;
 }
 
-@media screen and (max-width: 991px) { /*767*/
+@media screen and (max-width: 991px) {
   .phoneView {
     text-align: center;
     background-color: #6DD0F8;
@@ -129,8 +129,11 @@ padding-bottom: 40px;
   .row {
     padding-bottom: 0px;
   }
-
 }
+.page-header {
+  margin: 0px 0 20px !important;
+}
+
 /*listen page*/
 .description h4 {
   margin-top: 0px;
@@ -214,7 +217,7 @@ padding-bottom: 40px;
 
 .letterSize {
   font-size: 30px;
-  letter-spacing: 2em;
+  letter-spacing: 1.5em;
   text-align: center;
 }
 
@@ -236,16 +239,17 @@ padding-bottom: 40px;
 
 }
 
-/* footer */
-/*footer {
-  background-color: #6DD0F8;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
+iframe {
+  min-height:80vh;
+  min-width:100%;
 }
 
-footer p {
-  margin: 20px 0;
-}*/
+.jumbotron {
+  padding-top: 15px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 30px !important;
+  }
+}
